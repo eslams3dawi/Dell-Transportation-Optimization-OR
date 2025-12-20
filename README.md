@@ -3,9 +3,10 @@
 ## 📌 Overview
 This project applies **Operation Research transportation models** to optimize the distribution of **Dell electronics products** from manufacturing plants to regional distribution centers across the **EMEA (Europe, Middle East, and Africa) region**. The objective is to **minimize total transportation cost** while satisfying supply and demand constraints.
 
-The project demonstrates and compares two classical transportation approaches:
+The project demonstrates and compares three classical transportation approaches:
 - **North-West Corner Method**
 - **Least Cost Method**
+- **Vogel's Approximation Method (VAM)**
 
 ---
 
@@ -75,7 +76,13 @@ Dell faces a critical operational challenge in optimizing its European, Middle E
 - Allocates shipments starting from the lowest transportation cost
 - Produces better results than North-West Corner
 - **Complexity:** Low
-- **Cost Quality:** Medium Cost (Better)
+- **Cost Quality:** Medium Cost
+
+### 3️⃣ Vogel's Approximation Method (VAM)
+- Uses penalty costs to guide allocation
+- Produces solutions close to the optimal solution
+- **Complexity:** Medium
+- **Cost Quality:** Lowest Cost (Best)
 
 ---
 
@@ -84,9 +91,10 @@ Dell faces a critical operational challenge in optimizing its European, Middle E
 | Method | Cost Quality | Complexity | Description |
 |--------|-------------|------------|-------------|
 | **North-West Corner** | High Cost | Very Low | Baseline method, ignores costs |
-| **Least Cost** | Lower Cost | Low | Cost-aware allocation |
+| **Least Cost** | Medium Cost | Low | Cost-aware allocation |
+| **Vogel's Approximation** | Lowest Cost | Medium | Penalty-based optimization |
 
-**Conclusion:** The Least Cost Method provides a better cost solution for Dell's EMEA distribution network, achieving savings through optimized allocation of resources compared to the North-West Corner Method.
+**Conclusion:** The Vogel Approximation Method typically provides the best cost solution for Dell's EMEA distribution network, achieving substantial savings through optimized allocation of resources.
 
 ---
 
@@ -145,6 +153,6 @@ $$x_{ij} \geq 0 \quad \forall i, j$$
 
 ## 📈 Key Findings
 
-The transportation problem is one of the most practical applications of operations research. By comparing two different solution methods (North-West Corner and Least Cost) using both Python implementation and website verification, the project demonstrates that **algorithmic choice matters significantly**. The **Least Cost Method** provides a better cost solution for Dell's EMEA distribution network, achieving substantial savings through optimized allocation of resources.
+The transportation problem is one of the most practical applications of operations research. By comparing three different solution methods (North-West Corner, Least Cost, and Vogel's Approximation Method) using both Python implementation and website verification, the project demonstrates that **algorithmic choice matters significantly**. The **Vogel Approximation Method** provides the best cost solution for Dell's EMEA distribution network, achieving substantial savings through optimized allocation of resources.
 
 ---
